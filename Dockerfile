@@ -1,0 +1,1 @@
+WORKDIR /the/workdir/path
