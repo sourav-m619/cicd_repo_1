@@ -2,9 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
-    return 'Welcome to Python Flask World 10.0 with automate cloud build trigger'
+    return 'Welcome to Python Flask World V2.0'
 
 
 if __name__ == '__main__':
