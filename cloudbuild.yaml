@@ -12,10 +12,7 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 timeout: 1600s
-<<<<<<< HEAD
 
-=======
->>>>>>> e9ea573061a7ed54d97bf576c71f1ed51544ce9a
 # steps:
 # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
 #   entrypoint: 'bash'
