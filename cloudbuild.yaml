@@ -1,7 +1,25 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
-  entrypoint: 'bash'
-  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        gcloud app describe || gcloud app create --region=us-central
+        gcloud config set app/cloud_build_timeout 1600
+        gcloud app deploy
+
 options:
-  logging : CLOUD_LOGGING_ONLY
+  logging: CLOUD_LOGGING_ONLY
+
 timeout: 1600s
+<<<<<<< HEAD
+
+=======
+>>>>>>> e9ea573061a7ed54d97bf576c71f1ed51544ce9a
+# steps:
+# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
+#   entrypoint: 'bash'
+#   args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
+# options:
+#   logging : CLOUD_LOGGING_ONLY
+# timeout: 1600s
